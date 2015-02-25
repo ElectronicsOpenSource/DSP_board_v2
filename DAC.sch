@@ -1,0 +1,531 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ramp_generator-cache
+LIBS:OSPESA
+LIBS:grau
+LIBS:DSP_v2-cache
+EELAYER 27 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 2 5
+Title "EDM FPGA Ramp Generator "
+Date "23 feb 2015"
+Rev "1"
+Comp "JILA"
+Comment1 "Matt Grau"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AD5063 U5
+U 1 1 540F7CE0
+P 3950 4500
+AR Path="/54D650E6/540F7CE0" Ref="U5"  Part="1" 
+AR Path="/54D668FF/540F7CE0" Ref="U7"  Part="1" 
+F 0 "U7" V 3950 4500 60  0000 C CNN
+F 1 "AD5063" H 3950 4950 60  0000 C CNN
+F 2 "~" H 3950 4500 60  0000 C CNN
+F 3 "~" H 3950 4500 60  0000 C CNN
+	1    3950 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AD8675 U6
+U 1 1 540F7D03
+P 5600 4250
+AR Path="/54D650E6/540F7D03" Ref="U6"  Part="1" 
+AR Path="/54D668FF/540F7D03" Ref="U8"  Part="1" 
+F 0 "U8" H 5600 4250 60  0000 C CNN
+F 1 "AD8675" H 6000 4150 60  0000 C CNN
+F 2 "~" H 5600 4600 60  0000 C CNN
+F 3 "~" H 5600 4600 60  0000 C CNN
+	1    5600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4350 4550 4350
+Wire Wire Line
+	4550 4200 4650 4200
+Wire Wire Line
+	4650 4200 4650 4150
+Wire Wire Line
+	4650 4150 5050 4150
+$Comp
+L VDD #PWR028
+U 1 1 540F7D2B
+P 3650 6100
+AR Path="/54D650E6/540F7D2B" Ref="#PWR028"  Part="1" 
+AR Path="/54D668FF/540F7D2B" Ref="#PWR041"  Part="1" 
+F 0 "#PWR041" H 3650 6200 30  0001 C CNN
+F 1 "VDD" H 3650 6210 30  0000 C CNN
+F 2 "" H 3650 6100 60  0000 C CNN
+F 3 "" H 3650 6100 60  0000 C CNN
+	1    3650 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 4650 4550 4650
+$Comp
+L POT RV1
+U 1 1 540F7D66
+P 5500 3400
+AR Path="/54D650E6/540F7D66" Ref="RV1"  Part="1" 
+AR Path="/54D668FF/540F7D66" Ref="RV2"  Part="1" 
+F 0 "RV2" H 5500 3300 50  0000 C CNN
+F 1 "100K" H 5500 3400 50  0000 C CNN
+F 2 "~" H 5500 3400 60  0000 C CNN
+F 3 "~" H 5500 3400 60  0000 C CNN
+	1    5500 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 3650 5500 3700
+Wire Wire Line
+	5500 3150 5350 3150
+Wire Wire Line
+	5350 3150 5350 3600
+Wire Wire Line
+	5650 3400 5900 3400
+Wire Wire Line
+	5750 3350 5750 3850
+Wire Wire Line
+	3350 4200 3350 3000
+Wire Wire Line
+	3350 3000 6200 3000
+Wire Wire Line
+	6200 3000 6200 4250
+$Comp
+L C C12
+U 1 1 540F7D9C
+P 4800 3550
+AR Path="/54D650E6/540F7D9C" Ref="C12"  Part="1" 
+AR Path="/54D668FF/540F7D9C" Ref="C19"  Part="1" 
+F 0 "C19" H 4800 3650 40  0000 L CNN
+F 1 "10pF" H 4806 3465 40  0000 L CNN
+F 2 "~" H 4838 3400 30  0000 C CNN
+F 3 "~" H 4800 3550 60  0000 C CNN
+	1    4800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L -VAA #PWR029
+U 1 1 540F7DCB
+P 5600 4800
+AR Path="/54D650E6/540F7DCB" Ref="#PWR029"  Part="1" 
+AR Path="/54D668FF/540F7DCB" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 5600 4900 20  0001 C CNN
+F 1 "-VAA" H 5600 4900 30  0000 C CNN
+F 2 "" H 5600 4800 60  0000 C CNN
+F 3 "" H 5600 4800 60  0000 C CNN
+	1    5600 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 4800 5600 4750
+$Comp
+L VAA #PWR030
+U 1 1 540F7DED
+P 5750 3350
+AR Path="/54D650E6/540F7DED" Ref="#PWR030"  Part="1" 
+AR Path="/54D668FF/540F7DED" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 5750 3410 30  0001 C CNN
+F 1 "VAA" H 5750 3460 30  0000 C CNN
+F 2 "" H 5750 3350 60  0000 C CNN
+F 3 "" H 5750 3350 60  0000 C CNN
+	1    5750 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 3400
+$Comp
+L C C14
+U 1 1 540F7E0E
+P 5900 3600
+AR Path="/54D650E6/540F7E0E" Ref="C14"  Part="1" 
+AR Path="/54D668FF/540F7E0E" Ref="C21"  Part="1" 
+F 0 "C21" H 5900 3700 40  0000 L CNN
+F 1 "0.1uF" H 5906 3515 40  0000 L CNN
+F 2 "~" H 5938 3450 30  0000 C CNN
+F 3 "~" H 5900 3600 60  0000 C CNN
+	1    5900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C13
+U 1 1 540F7E29
+P 5850 4750
+AR Path="/54D650E6/540F7E29" Ref="C13"  Part="1" 
+AR Path="/54D668FF/540F7E29" Ref="C20"  Part="1" 
+F 0 "C20" H 5850 4850 40  0000 L CNN
+F 1 "0.1uF" H 5856 4665 40  0000 L CNN
+F 2 "~" H 5888 4600 30  0000 C CNN
+F 3 "~" H 5850 4750 60  0000 C CNN
+	1    5850 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 4750 5650 4750
+$Comp
+L AGND #PWR031
+U 1 1 540F7E46
+P 6050 4850
+AR Path="/54D650E6/540F7E46" Ref="#PWR031"  Part="1" 
+AR Path="/54D668FF/540F7E46" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 6050 4850 40  0001 C CNN
+F 1 "AGND" H 6050 4780 50  0000 C CNN
+F 2 "" H 6050 4850 60  0000 C CNN
+F 3 "" H 6050 4850 60  0000 C CNN
+	1    6050 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4850 6050 4750
+$Comp
+L AGND #PWR032
+U 1 1 540F7E69
+P 5900 3850
+AR Path="/54D650E6/540F7E69" Ref="#PWR032"  Part="1" 
+AR Path="/54D668FF/540F7E69" Ref="#PWR045"  Part="1" 
+F 0 "#PWR045" H 5900 3850 40  0001 C CNN
+F 1 "AGND" H 5900 3780 50  0000 C CNN
+F 2 "" H 5900 3850 60  0000 C CNN
+F 3 "" H 5900 3850 60  0000 C CNN
+	1    5900 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3800 5900 3850
+$Comp
+L AGND #PWR033
+U 1 1 540F7FD2
+P 3250 4400
+AR Path="/54D650E6/540F7FD2" Ref="#PWR033"  Part="1" 
+AR Path="/54D668FF/540F7FD2" Ref="#PWR046"  Part="1" 
+F 0 "#PWR046" H 3250 4400 40  0001 C CNN
+F 1 "AGND" H 3250 4330 50  0000 C CNN
+F 2 "" H 3250 4400 60  0000 C CNN
+F 3 "" H 3250 4400 60  0000 C CNN
+	1    3250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4400 3250 4350
+Wire Wire Line
+	3250 4350 3350 4350
+$Comp
+L DGND #PWR034
+U 1 1 540F7FF3
+P 3250 4550
+AR Path="/54D650E6/540F7FF3" Ref="#PWR034"  Part="1" 
+AR Path="/54D668FF/540F7FF3" Ref="#PWR047"  Part="1" 
+F 0 "#PWR047" H 3250 4550 40  0001 C CNN
+F 1 "DGND" H 3250 4480 40  0000 C CNN
+F 2 "" H 3250 4550 60  0000 C CNN
+F 3 "" H 3250 4550 60  0000 C CNN
+	1    3250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4500 3250 4500
+Wire Wire Line
+	3250 4500 3250 4550
+Text HLabel 3000 4650 0    60   Input ~ 0
+CS
+Wire Wire Line
+	3000 4650 3350 4650
+Text HLabel 3000 4800 0    60   Input ~ 0
+SCLK
+Wire Wire Line
+	3000 4800 3350 4800
+Text HLabel 4700 4800 2    60   Input ~ 0
+DATA
+Wire Wire Line
+	4550 4800 4700 4800
+Wire Wire Line
+	4800 3750 4800 4350
+Connection ~ 4800 4350
+$Comp
+L R R7
+U 1 1 540F835F
+P 8150 4500
+AR Path="/54D650E6/540F835F" Ref="R7"  Part="1" 
+AR Path="/54D668FF/540F835F" Ref="R10"  Part="1" 
+F 0 "R10" V 8230 4500 40  0000 C CNN
+F 1 "50" V 8157 4501 40  0000 C CNN
+F 2 "~" V 8080 4500 30  0000 C CNN
+F 3 "~" H 8150 4500 30  0000 C CNN
+	1    8150 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 540F8371
+P 6500 4250
+AR Path="/54D650E6/540F8371" Ref="R6"  Part="1" 
+AR Path="/54D668FF/540F8371" Ref="R9"  Part="1" 
+F 0 "R9" V 6580 4250 40  0000 C CNN
+F 1 "50" V 6507 4251 40  0000 C CNN
+F 2 "~" V 6430 4250 30  0000 C CNN
+F 3 "~" H 6500 4250 30  0000 C CNN
+	1    6500 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L INDUCTOR_SMALL L1
+U 1 1 540F839D
+P 7050 4250
+AR Path="/54D650E6/540F839D" Ref="L1"  Part="1" 
+AR Path="/54D668FF/540F839D" Ref="L3"  Part="1" 
+F 0 "L3" H 7050 4350 50  0000 C CNN
+F 1 "47uH" H 7050 4200 50  0000 C CNN
+F 2 "~" H 7050 4250 60  0000 C CNN
+F 3 "~" H 7050 4250 60  0000 C CNN
+	1    7050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L2
+U 1 1 540F83AA
+P 7650 4250
+AR Path="/54D650E6/540F83AA" Ref="L2"  Part="1" 
+AR Path="/54D668FF/540F83AA" Ref="L4"  Part="1" 
+F 0 "L4" H 7650 4350 50  0000 C CNN
+F 1 "47uH" H 7650 4200 50  0000 C CNN
+F 2 "~" H 7650 4250 60  0000 C CNN
+F 3 "~" H 7650 4250 60  0000 C CNN
+	1    7650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C15
+U 1 1 540F83BA
+P 7350 4450
+AR Path="/54D650E6/540F83BA" Ref="C15"  Part="1" 
+AR Path="/54D668FF/540F83BA" Ref="C22"  Part="1" 
+F 0 "C22" H 7350 4550 40  0000 L CNN
+F 1 "33nF" H 7356 4365 40  0000 L CNN
+F 2 "~" H 7388 4300 30  0000 C CNN
+F 3 "~" H 7350 4450 60  0000 C CNN
+	1    7350 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C16
+U 1 1 540F83C0
+P 7950 4450
+AR Path="/54D650E6/540F83C0" Ref="C16"  Part="1" 
+AR Path="/54D668FF/540F83C0" Ref="C23"  Part="1" 
+F 0 "C23" H 7950 4550 40  0000 L CNN
+F 1 "10nF" H 7956 4365 40  0000 L CNN
+F 2 "~" H 7988 4300 30  0000 C CNN
+F 3 "~" H 7950 4450 60  0000 C CNN
+	1    7950 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4250 6800 4250
+Wire Wire Line
+	7300 4250 7400 4250
+Connection ~ 7350 4250
+Connection ~ 7950 4250
+$Comp
+L AGND #PWR035
+U 1 1 540F84BB
+P 7350 4700
+AR Path="/54D650E6/540F84BB" Ref="#PWR035"  Part="1" 
+AR Path="/54D668FF/540F84BB" Ref="#PWR048"  Part="1" 
+F 0 "#PWR048" H 7350 4700 40  0001 C CNN
+F 1 "AGND" H 7350 4630 50  0000 C CNN
+F 2 "" H 7350 4700 60  0000 C CNN
+F 3 "" H 7350 4700 60  0000 C CNN
+	1    7350 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L AGND #PWR036
+U 1 1 540F84C1
+P 7950 4700
+AR Path="/54D650E6/540F84C1" Ref="#PWR036"  Part="1" 
+AR Path="/54D668FF/540F84C1" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 7950 4700 40  0001 C CNN
+F 1 "AGND" H 7950 4630 50  0000 C CNN
+F 2 "" H 7950 4700 60  0000 C CNN
+F 3 "" H 7950 4700 60  0000 C CNN
+	1    7950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L AGND #PWR037
+U 1 1 540F84C7
+P 8150 4800
+AR Path="/54D650E6/540F84C7" Ref="#PWR037"  Part="1" 
+AR Path="/54D668FF/540F84C7" Ref="#PWR050"  Part="1" 
+F 0 "#PWR050" H 8150 4800 40  0001 C CNN
+F 1 "AGND" H 8150 4730 50  0000 C CNN
+F 2 "" H 8150 4800 60  0000 C CNN
+F 3 "" H 8150 4800 60  0000 C CNN
+	1    8150 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4800 8150 4750
+Wire Wire Line
+	7950 4700 7950 4650
+Wire Wire Line
+	7350 4700 7350 4650
+Wire Wire Line
+	6200 4250 6250 4250
+$Comp
+L BNC P11
+U 1 1 540F8580
+P 8500 4250
+AR Path="/54D650E6/540F8580" Ref="P11"  Part="1" 
+AR Path="/54D668FF/540F8580" Ref="P12"  Part="1" 
+F 0 "P12" H 8510 4370 60  0000 C CNN
+F 1 "BNC" V 8610 4190 40  0000 C CNN
+F 2 "~" H 8500 4250 60  0000 C CNN
+F 3 "~" H 8500 4250 60  0000 C CNN
+	1    8500 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 8150 4250
+Wire Wire Line
+	7900 4250 8350 4250
+$Comp
+L AGND #PWR038
+U 1 1 540F8AA3
+P 8500 4500
+AR Path="/54D650E6/540F8AA3" Ref="#PWR038"  Part="1" 
+AR Path="/54D668FF/540F8AA3" Ref="#PWR051"  Part="1" 
+F 0 "#PWR051" H 8500 4500 40  0001 C CNN
+F 1 "AGND" H 8500 4430 50  0000 C CNN
+F 2 "" H 8500 4500 60  0000 C CNN
+F 3 "" H 8500 4500 60  0000 C CNN
+	1    8500 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4500 8500 4450
+$Comp
+L R R5
+U 1 1 540F8D3A
+P 6500 4000
+AR Path="/54D650E6/540F8D3A" Ref="R5"  Part="1" 
+AR Path="/54D668FF/540F8D3A" Ref="R8"  Part="1" 
+F 0 "R8" V 6580 4000 40  0000 C CNN
+F 1 "short" V 6507 4001 40  0000 C CNN
+F 2 "~" V 6430 4000 30  0000 C CNN
+F 3 "~" H 6500 4000 30  0000 C CNN
+	1    6500 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 4000 6200 4000
+Connection ~ 6200 4000
+Wire Wire Line
+	6750 4000 8350 4000
+Wire Wire Line
+	8350 4000 8350 4250
+$Comp
+L CP1 C11
+U 1 1 540F8271
+P 4000 6300
+AR Path="/54D650E6/540F8271" Ref="C11"  Part="1" 
+AR Path="/54D668FF/540F8271" Ref="C18"  Part="1" 
+F 0 "C18" H 4050 6400 50  0000 L CNN
+F 1 "10uF" H 4050 6200 50  0000 L CNN
+F 2 "~" H 4000 6300 60  0000 C CNN
+F 3 "~" H 4000 6300 60  0000 C CNN
+	1    4000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C10
+U 1 1 540F8280
+P 3700 6300
+AR Path="/54D650E6/540F8280" Ref="C10"  Part="1" 
+AR Path="/54D668FF/540F8280" Ref="C17"  Part="1" 
+F 0 "C17" H 3700 6400 40  0000 L CNN
+F 1 "0.1uF" H 3706 6215 40  0000 L CNN
+F 2 "~" H 3738 6150 30  0000 C CNN
+F 3 "~" H 3700 6300 60  0000 C CNN
+	1    3700 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 6100 4000 6100
+Connection ~ 3700 6100
+$Comp
+L DGND #PWR039
+U 1 1 540F832A
+P 4000 6550
+AR Path="/54D650E6/540F832A" Ref="#PWR039"  Part="1" 
+AR Path="/54D668FF/540F832A" Ref="#PWR052"  Part="1" 
+F 0 "#PWR052" H 4000 6550 40  0001 C CNN
+F 1 "DGND" H 4000 6480 40  0000 C CNN
+F 2 "" H 4000 6550 60  0000 C CNN
+F 3 "" H 4000 6550 60  0000 C CNN
+	1    4000 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6550 4000 6500
+Wire Wire Line
+	4000 6500 3700 6500
+Text Notes 2500 5750 0    59   ~ 0
+The power supply to the AD5063 should be bypassed with \n10 μF and 0.1 μF capacitors. The capacitors should physically be \nas close as possible to the device, with the 0.1 μF capacitor \nideally right up against the device. The 10 μF capacitors are the \ntantalum bead type.
+Text Notes 6450 5150 0    59   ~ 0
+4th order Butterworth low pass filter with nominally 200kHz corner 
+Text Notes 4850 2900 0    39   ~ 0
+optional capacitor to roll off gain.\nDAC nominally has a feedback resistance of 30k\n\n
+$Comp
+L VDD #PWR040
+U 1 1 540FA4F8
+P 4600 4650
+AR Path="/54D650E6/540FA4F8" Ref="#PWR040"  Part="1" 
+AR Path="/54D668FF/540FA4F8" Ref="#PWR053"  Part="1" 
+F 0 "#PWR053" H 4600 4750 30  0001 C CNN
+F 1 "VDD" H 4600 4760 30  0000 C CNN
+F 2 "" H 4600 4650 60  0000 C CNN
+F 3 "" H 4600 4650 60  0000 C CNN
+	1    4600 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 3350 4800 3000
+Connection ~ 4800 3000
+Text HLabel 4700 4500 2    60   Input ~ 0
+Vref
+Wire Wire Line
+	4550 4500 4700 4500
+$EndSCHEMATC

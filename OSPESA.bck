@@ -1,0 +1,41 @@
+EESchema-DOCLIB  Version 2.0  Date: 2/22/2015 12:01:10 PM
+#
+$CMP AD7685
+D ADC 16-bit 250kSPS
+$ENDCMP
+#
+$CMP AD825
+D AD825 41MHz JFET OpAmp
+$ENDCMP
+#
+$CMP AD8606
+D Dual Op amp
+K ampliop
+$ENDCMP
+#
+$CMP AD8618
+D Quad Op amp
+K ampliop
+$ENDCMP
+#
+$CMP ADR391
+D Voltage reference 2.5V
+$ENDCMP
+#
+$CMP ADR435
+D ADC 16-bit 250kSPS
+$ENDCMP
+#
+$CMP LM317
+D Linear Regulator (adjustable)
+K POWER REGUL
+F regulator/lm117.pdf
+$ENDCMP
+#
+$CMP LM317-D2PAK-3
+D LM317, 1.5A 35V Adjustable Linear Regulator, D2PAK-3
+K Adjustable Voltage Regulator 1.5A Positive
+F http://www.national.com/ds/LM/LM117.pdf
+$ENDCMP
+#
+#End Doc Library
